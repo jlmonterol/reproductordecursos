@@ -29,23 +29,23 @@ Este proyecto ha sido construido utilizando las siguientes herramientas y librer
 
 A continuación se detalla la organización de los archivos fuente:
 
-reproductordecursos/
-├── app/
-│   ├── data/                   # Gestión de datos (JSON) y modelos
-│   ├── gui/                    # Interfaz Gráfica
-│   │   ├── dialogs/            # Ventanas emergentes (Acerca de, Pomodoro, Exportar, Opciones y Test/Evaluación)
-│   │   ├── widgets/            # Componentes reutilizables (Video, Notas)
-│   │   ├── main_window.py      # Ventana principal
-│   │   ├── styles.py           # Estilos visuales
-│   │   └── tree_manager.py     # Gestor del árbol de navegación
-│   ├── logic/                  # Lógica de Negocio (Controlador VLC, Archivos)
-│   ├── utils/                  # Utilidades y configuración de rutas
-│   ├── config.py               # Constantes y configuración global
-│   └── __init__.py
-├── assets/                     # Recursos Estáticos
-│   ├── audio/                  # Sonidos de notificación
-│   └── images/                 # Iconos y recursos gráficos
-├── main.py                     # Punto de entrada de la aplicación
-├── requirements.txt            # Lista de dependencias
-├── ReproductorCursos.ico       # Icono del proyecto
-└── README.md                   # Documentación del proyecto
+reproductordecursos/  
+├── app/  
+│   ├── data/                   # Gestión de datos (JSON) y modelos  
+│   ├── gui/                    # Interfaz Gráfica  
+│   │   ├── dialogs/            # Ventanas emergentes (Acerca de, Pomodoro, Exportar, Opciones y Test/Evaluación)  
+│   │   ├── widgets/            # Componentes reutilizables (Video, Notas)  
+│   │   ├── main_window.py      # Ventana principal  
+│   │   ├── styles.py           # Estilos visuales  
+│   │   └── tree_manager.py     # Gestor del árbol de navegación  
+│   ├── logic/                  # Lógica de Negocio (Controlador VLC, Archivos)  
+│   ├── utils/                  # Utilidades y configuración de rutas  
+│   ├── config.py               # Constantes y configuración global  
+│   └── __init__.py  
+├── assets/                     # Recursos Estáticos  
+│   ├── audio/                  # Sonidos de notificación  
+│   └── images/                 # Iconos y recursos gráficos  
+├── main.py                     # Punto de entrada de la aplicación  
+├── requirements.txt            # Lista de dependencias  
+├── ReproductorCursos.ico       # Icono del proyecto  
+└── README.md                   # Documentación del proyecto  
