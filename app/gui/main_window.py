@@ -998,7 +998,7 @@ class MainWindow(QMainWindow):
             
             # Ajustar interfaz a modo audio.
             self.is_audio_mode = True
-            self.show_audio_overlay(True)
+            self.videoWidget.set_audio_mode(True)
             
         self._load_course_image(path)
 
@@ -2533,4 +2533,5 @@ class MainWindow(QMainWindow):
                         self._copy_exercises_to_work_dir(original_exercises_path, chapter_dir_path)
                         # Intentar abrir de nuevo si se copió.
                         if os.path.exists(target_path):
+
                             self._open_in_ide(target_path)
