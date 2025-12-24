@@ -1196,10 +1196,16 @@ class MainWindow(QMainWindow):
         base_path = os.path.splitext(file_path)[0]
         desc_text = "Sin descripción."
         
+        """
         if os.path.exists(base_path + ".md"):
             with open(base_path + ".md", "r", encoding="utf-8") as f: desc_text = f.read()
         elif os.path.exists(base_path + ".txt"):
             with open(base_path + ".txt", "r", encoding="utf-8") as f: desc_text = f.read()
+        """
+
+        if os.path.exists(base_path + ".txt"):
+            with open(base_path + ".txt", "r", encoding="utf-8") as f: 
+                desc_text = f.read()
         
         # Aquí usamos el helper nuevo que escapa HTML y crea enlaces.
         link_color = "#66ccff" if self.dark_mode else "#0000ff"
@@ -1826,7 +1832,8 @@ class MainWindow(QMainWindow):
                 
             elif os.path.isfile(full_p):
                 ext = os.path.splitext(f)[1].lower()
-                if ext not in VIDEO_EXTS and ext not in AUDIO_EXTS and ext != ".test" and not f.endswith(".txt") and not f.endswith(".md"):
+                # if ext not in VIDEO_EXTS and ext not in AUDIO_EXTS and ext != ".test" and not f.endswith(".txt") and not f.endswith(".md"):
+                if ext not in VIDEO_EXTS and ext not in AUDIO_EXTS and ext != ".test" and not f.endswith(".txt"):
                      btn = QPushButton(f)
                      btn.clicked.connect(lambda ch, p=full_p: QDesktopServices.openUrl(QUrl.fromLocalFile(p)))
                      self.files_layout.addWidget(btn)
@@ -2535,3 +2542,4 @@ class MainWindow(QMainWindow):
                         if os.path.exists(target_path):
 
                             self._open_in_ide(target_path)
+
