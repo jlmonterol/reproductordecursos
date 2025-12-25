@@ -2484,13 +2484,13 @@ class MainWindow(QMainWindow):
         layout.addSpacing(10)
         
         # Radio Buttons.
-        rb_original = QRadioButton("Abrir en el directorio original del curso.")
-        rb_original.setChecked(True)
-        
         rb_work = QRadioButton("Abrir en el directorio de trabajo definido.")
-        
-        layout.addWidget(rb_original)
+        rb_work.setChecked(True)
+
+        rb_original = QRadioButton("Abrir en el directorio original del curso.")
+
         layout.addWidget(rb_work)
+        layout.addWidget(rb_original)
         layout.addSpacing(15)
         
         # Botones Aceptar / Cancelar.
@@ -2542,4 +2542,5 @@ class MainWindow(QMainWindow):
                         if os.path.exists(target_path):
 
                             self._open_in_ide(target_path)
+
 
